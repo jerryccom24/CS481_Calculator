@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="calculator.MainPage">
+    <!--
+    Jerry Compton
+    CS481
+    HW2 - Calculator
+
+
+    Implemented using a defined GRID. The idea of using a grid for the layout was directly
+    inspired by https://docs.microsoft.com/en-us/samples/xamarin/mobile-samples/liveplayer-basiccalculator/
+    I found it to be informative and I used this source for figuring out how I wanted to
+    implement the view. All of the logic code in C# was constructed based on my own idea.
+    -->
+
+    <Grid Padding="5,0" RowSpacing="3" ColumnSpacing="3" BackgroundColor="Black">
+
+       <Grid.RowDefinitions>
+         <RowDefinition Height="2*" />
+         <RowDefinition Height="*" />
+         <RowDefinition Height="*" />
+         <RowDefinition Height="*" />
+         <RowDefinition Height="*" />
+         <RowDefinition Height="*" />
+       </Grid.RowDefinitions>
+
+       <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="*" />
+          <ColumnDefinition Width="*" />
+          <ColumnDefinition Width="*" />
+          <ColumnDefinition Width="*" />
+       </Grid.ColumnDefinitions>
+        
+
+       <Label x:Name="resultText" FontSize="48" FontAttributes="Bold" BackgroundColor="Black" Text="0"
+              TextColor="White" HorizontalTextAlignment="End" VerticalTextAlignment="Center"
+              LineBreakMode="NoWrap" Grid.ColumnSpan="4" />
+
+       <Button Text="1" Grid.Row="1" Grid.Column="0"
+               BackgroundColor="LightGray" TextColor="Black"
+               FontSize="45" BorderRadius="1" Clicked="on_select_num" />
+       <Button Text="2" Grid.Row="1" Grid.Column="1"
+               BackgroundColor="LightGray" TextColor="Black"
+               FontSize="45" BorderRadius="1" Clicked="on_select_num"/>
+       <Button Text="3" Grid.Row="1" Grid.Column="2"
+               BackgroundColor="LightGray" TextColor="Black"
+               FontSize="45" BorderRadius="1" Clicked="on_select_num"/>
+
+      <Button Text="4" Grid.Row="2" Grid.Column="0"
+               BackgroundColor="LightGray" TextColor="Black"
+               FontSize="45" BorderRadius="1" Clicked="on_select_num" />
+       <Button Text="5" Grid.Row="2" Grid.Column="1"
+               BackgroundColor="LightGray" TextColor="Black"
+               FontSize="45" BorderRadius="1" Clicked="on_select_num" />
+       <Button Text="6" Grid.Row="2" Grid.Column="2"
+               BackgroundColor="LightGray" TextColor="Black"
+               FontSize="45" BorderRadius="1" Clicked="on_select_num" />
+
+      <Button Text="7" Grid.Row="3" Grid.Column="0"
+               BackgroundColor="LightGray" TextColor="Black"
+               FontSize="45" BorderRadius="1" Clicked="on_select_num" />
+       <Button Text="8" Grid.Row="3" Grid.Column="1"
+               BackgroundColor="LightGray" TextColor="Black"
+               FontSize="45" BorderRadius="1" Clicked="on_select_num" />
+       <Button Text="9" Grid.Row="3" Grid.Column="2"
+               BackgroundColor="LightGray" TextColor="Black"
+               FontSize="45" BorderRadius="1" Clicked="on_select_num" />
+       <Button Text="0" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="3"
+               BackgroundColor="LightGray" TextColor="Black"
+               FontSize="45" BorderRadius="1" Clicked="on_select_num" />
+
+        <Button Text="/" Grid.Row="1" Grid.Column="3"
+                BackgroundColor="Red" TextColor="White"
+                FontSize="45" BorderRadius="0" Clicked="on_select_operator"/>
+       <Button Text="x" Grid.Row="2" Grid.Column="3"
+                BackgroundColor="Red" TextColor="White"
+                FontSize="45" BorderRadius="0" Clicked="on_select_operator"/>
+       <Button Text="-" Grid.Row="3" Grid.Column="3"
+                BackgroundColor="Red" TextColor="White"
+                FontSize="45" BorderRadius="0" Clicked="on_select_operator"/>
+       <Button Text="+" Grid.Row="4" Grid.Column="3"
+                BackgroundColor="Red" TextColor="White"
+                FontSize="45" BorderRadius="0" Clicked="on_select_operator"/>
+
+
+       <Button Text="=" Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="3"
+                BackgroundColor="Gold" TextColor="White"
+                FontSize="45" BorderRadius="0" Clicked="on_compute"/>
+        <Button Text="Clear" Grid.Row="5" Grid.Column="3"
+                BackgroundColor="Red" TextColor="White"
+                FontSize="40" BorderRadius="0" Clicked="on_clear"/>
+    </Grid>
+
+</ContentPage>
