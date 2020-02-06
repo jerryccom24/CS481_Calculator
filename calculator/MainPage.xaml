@@ -92,7 +92,7 @@
                 FontSize="45" BorderRadius="0" Clicked="on_compute"/>
         <Button Text="Clear" Grid.Row="5" Grid.Column="3"
                 BackgroundColor="Red" TextColor="White"
-                FontSize="40" BorderRadius="0" Clicked="on_clear"/>
+                FontSize="25" BorderRadius="0" Clicked="on_clear"/>
     </Grid>
 
 </ContentPage>
