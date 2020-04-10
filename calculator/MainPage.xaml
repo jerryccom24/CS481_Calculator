@@ -5,6 +5,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="calculator.MainPage">
+    
     <!--
     Jerry Compton
     CS481
@@ -16,6 +17,17 @@
     I found it to be informative and I used this source for figuring out how I wanted to
     implement the view. All of the logic code in C# was constructed based on my own idea.
     -->
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Color x:Key="numBgColor">LightGray</Color>
+            <Color x:Key="numColor">Black</Color>
+            <Color x:Key="operatorColor">White</Color>
+            <Color x:Key="operatorBgColor">Red</Color>
+            <Color x:Key="equalsBgColor">Pink</Color>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    
 
     <Grid Padding="5,0" RowSpacing="3" ColumnSpacing="3" BackgroundColor="Black">
 
@@ -41,57 +53,57 @@
               LineBreakMode="NoWrap" Grid.ColumnSpan="4" />
 
        <Button Text="1" Grid.Row="1" Grid.Column="0"
-               BackgroundColor="LightGray" TextColor="Black"
+               BackgroundColor="{StaticResource numBgColor}" TextColor="{StaticResource numColor}"
                FontSize="45" BorderRadius="1" Clicked="on_select_num" />
        <Button Text="2" Grid.Row="1" Grid.Column="1"
-               BackgroundColor="LightGray" TextColor="Black"
+               BackgroundColor="{StaticResource numBgColor}" TextColor="{StaticResource numColor}"
                FontSize="45" BorderRadius="1" Clicked="on_select_num"/>
        <Button Text="3" Grid.Row="1" Grid.Column="2"
-               BackgroundColor="LightGray" TextColor="Black"
+               BackgroundColor="{StaticResource numBgColor}" TextColor="{StaticResource numColor}"
                FontSize="45" BorderRadius="1" Clicked="on_select_num"/>
 
       <Button Text="4" Grid.Row="2" Grid.Column="0"
-               BackgroundColor="LightGray" TextColor="Black"
+               BackgroundColor="{StaticResource numBgColor}" TextColor="{StaticResource numColor}"
                FontSize="45" BorderRadius="1" Clicked="on_select_num" />
        <Button Text="5" Grid.Row="2" Grid.Column="1"
-               BackgroundColor="LightGray" TextColor="Black"
+               BackgroundColor="{StaticResource numBgColor}" TextColor="{StaticResource numColor}"
                FontSize="45" BorderRadius="1" Clicked="on_select_num" />
        <Button Text="6" Grid.Row="2" Grid.Column="2"
-               BackgroundColor="LightGray" TextColor="Black"
+               BackgroundColor="{StaticResource numBgColor}" TextColor="{StaticResource numColor}"
                FontSize="45" BorderRadius="1" Clicked="on_select_num" />
 
       <Button Text="7" Grid.Row="3" Grid.Column="0"
-               BackgroundColor="LightGray" TextColor="Black"
+               BackgroundColor="{StaticResource numBgColor}" TextColor="{StaticResource numColor}"
                FontSize="45" BorderRadius="1" Clicked="on_select_num" />
        <Button Text="8" Grid.Row="3" Grid.Column="1"
-               BackgroundColor="LightGray" TextColor="Black"
+               BackgroundColor="{StaticResource numBgColor}" TextColor="{StaticResource numColor}"
                FontSize="45" BorderRadius="1" Clicked="on_select_num" />
        <Button Text="9" Grid.Row="3" Grid.Column="2"
-               BackgroundColor="LightGray" TextColor="Black"
+               BackgroundColor="{StaticResource numBgColor}" TextColor="{StaticResource numColor}"
                FontSize="45" BorderRadius="1" Clicked="on_select_num" />
        <Button Text="0" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="3"
-               BackgroundColor="LightGray" TextColor="Black"
+               BackgroundColor="{StaticResource numBgColor}" TextColor="{StaticResource numColor}"
                FontSize="45" BorderRadius="1" Clicked="on_select_num" />
 
         <Button Text="/" Grid.Row="1" Grid.Column="3"
-                BackgroundColor="Red" TextColor="White"
+                BackgroundColor="{StaticResource operatorBgColor}" TextColor="{StaticResource operatorColor}"
                 FontSize="45" BorderRadius="0" Clicked="on_select_operator"/>
        <Button Text="x" Grid.Row="2" Grid.Column="3"
-                BackgroundColor="Red" TextColor="White"
+                BackgroundColor="{StaticResource operatorBgColor}" TextColor="{StaticResource operatorColor}"
                 FontSize="45" BorderRadius="0" Clicked="on_select_operator"/>
        <Button Text="-" Grid.Row="3" Grid.Column="3"
-                BackgroundColor="Red" TextColor="White"
+                BackgroundColor="{StaticResource operatorBgColor}" TextColor="{StaticResource operatorColor}"
                 FontSize="45" BorderRadius="0" Clicked="on_select_operator"/>
        <Button Text="+" Grid.Row="4" Grid.Column="3"
-                BackgroundColor="Red" TextColor="White"
+                BackgroundColor="{StaticResource operatorBgColor}" TextColor="{StaticResource operatorColor}"
                 FontSize="45" BorderRadius="0" Clicked="on_select_operator"/>
 
 
        <Button Text="=" Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="3"
-                BackgroundColor="Gold" TextColor="White"
+                BackgroundColor="{StaticResource equalsBgColor}" TextColor="{StaticResource operatorColor}"
                 FontSize="45" BorderRadius="0" Clicked="on_compute"/>
         <Button Text="Clear" Grid.Row="5" Grid.Column="3"
-                BackgroundColor="Red" TextColor="White"
+                BackgroundColor="{StaticResource operatorBgColor}" TextColor="{StaticResource operatorColor}"
                 FontSize="25" BorderRadius="0" Clicked="on_clear"/>
     </Grid>
 
